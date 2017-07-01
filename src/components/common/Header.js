@@ -1,22 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-import LoadingDots from './LoadingDots';
+import {Row, Col} from 'react-materialize'
 
-const Header = ({loading}) => {
-  const activeStyle = { color: 'blue' };
+
+const Header = props => {
+  const divStyle = {
+    textAlign: 'center',
+  }
+
   return (
-    <nav>
-      <NavLink to="/" activeStyle={activeStyle} exact>Home</NavLink>
-      {" | "}
-      <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
-      {loading && <LoadingDots interval={100} dots={20}/>}
-    </nav>
+    <Row>
+      <Col style={divStyle} s={12}>
+        <h1>{props.title}</h1>
+        <p>{props.subTitle}</p>
+      </Col>
+    </Row>
   );
 };
 
-Header.propTypes = {
-  loading: PropTypes.bool.isRequired
-};
 
 export default Header;

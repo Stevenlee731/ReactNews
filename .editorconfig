@@ -1,7 +1,11 @@
+# Config helps developers define and maintain consistent
+# coding styles between different editors and IDEs
 # editorconfig.org
+
 root = true
 
 [*]
+# We recommend you to keep these unchanged
 indent_style = space
 indent_size = 2
 end_of_line = lf

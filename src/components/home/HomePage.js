@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Row, Col} from 'react-materialize'
 
 class HomePage extends React.Component {
+
     render() {
         return (
-            <div className="jumbotron">
+            <Row>
+              <Col s={12} className='grid-example'>
                 <h1>React News</h1>
-                <p>Nec dubitamus multa iter quae et nos invenerat.</p>
-                <Link to="about" className="btn btn-primary btn-lg">Learn more</Link>
-            </div>
+                <p>Your relevant news hub</p>
+              </Col>
+            </Row>
         );
     }
 }
